@@ -13,16 +13,20 @@ export const PortfolioGallery: React.FC = () => {
     { id: 'all', label: t('Semua Jenis Solekan', 'All Makeup Types') },
     { id: 'nikah', label: t('Akad Nikah', 'Solemnization') },
     { id: 'sanding', label: t('Sanding & Pelamin', 'Reception (Sanding)') },
+    { id: 'sambut-menantu', label: t('Sambut Menantu', 'Sambut Menantu') },
+    { id: 'graduation', label: t('Graduasi / Konvo', 'Graduation / Convo') },
     { id: 'engagement', label: t('Pertunangan', 'Engagement') },
     { id: 'bridesmaid', label: t('Bridesmaid', 'Bridesmaid') },
     { id: 'dinner', label: t('Dinner & Event', 'Dinner & Event') },
     { id: 'family', label: t('Ibu Pengantin & Keluarga', 'Family & Mother of Bride') },
-    { id: 'hightea', label: t('Hi-Tea & Konvo', 'High Tea & Convocation') },
+    { id: 'hightea', label: t('Hi-Tea & Outdoor', 'High Tea & Outdoor') },
     { id: 'glass-skin', label: t('Glass Skin Glow', 'Glass Skin Glow') },
   ];
 
   const filteredItems = PORTFOLIO_GALLERY.filter((item) => {
     if (activeFilter === 'all') return true;
+    if (activeFilter === 'sanding' && item.category === 'sambut-menantu') return true;
+    if (activeFilter === 'hightea' && item.category === 'graduation') return true;
     return item.category === activeFilter;
   });
 
@@ -54,13 +58,13 @@ export const PortfolioGallery: React.FC = () => {
           </div>
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        {/* Gallery Grid: 2 images per row on phone, 5 images per row on desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5">
           {filteredItems.map((item) => (
             <div
               key={item.id}
               onClick={() => setActiveModalItem(item)}
-              className="group cursor-pointer rounded-3xl overflow-hidden bg-white border-2 border-[#F5C3C3]/60 shadow-sm hover:shadow-xl hover:border-[#E8B4B4] transition-all duration-300 flex flex-col justify-between"
+              className="group cursor-pointer rounded-2xl sm:rounded-3xl overflow-hidden bg-white border-2 border-[#F5C3C3]/60 shadow-sm hover:shadow-xl hover:border-[#E8B4B4] transition-all duration-300 flex flex-col justify-between"
             >
               <div className="relative aspect-[3/4] overflow-hidden bg-rose-50">
                 <img
@@ -72,32 +76,34 @@ export const PortfolioGallery: React.FC = () => {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent opacity-65 group-hover:opacity-85 transition-opacity" />
 
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-md p-2 rounded-full text-[#592332] shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Eye className="w-4 h-4 text-[#A85868]" />
+                <div className="absolute top-2.5 right-2.5 bg-white/90 backdrop-blur-md p-1.5 rounded-full text-[#592332] shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                  <Eye className="w-3.5 h-3.5 text-[#A85868]" />
                 </div>
 
-                <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="text-[10px] tracking-wider uppercase font-bold text-rose-200 block mb-1">
+                <div className="absolute bottom-2.5 left-2.5 right-2.5 text-white">
+                  <span className="text-[9px] sm:text-[10px] tracking-wider uppercase font-bold text-rose-200 block mb-0.5">
                     {item.lookType[lang]}
                   </span>
-                  <h3 className="font-serif text-lg font-bold leading-tight text-white group-hover:text-[#F5C3C3] transition-colors">
+                  <h3 className="font-serif text-xs sm:text-sm lg:text-xs xl:text-sm font-bold leading-snug text-white group-hover:text-[#F5C3C3] transition-colors line-clamp-2">
                     {item.title[lang]}
                   </h3>
                 </div>
               </div>
 
-              <div className="p-4 space-y-2 bg-white">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-neutral-500 font-medium">
-                    {t('Kemasan:', 'Finish:')}
-                  </span>
-                  <span className="font-bold text-[#592332]">{item.finish[lang]}</span>
+              <div className="p-2.5 sm:p-3.5 space-y-1.5 bg-white flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center justify-between text-[11px] sm:text-xs">
+                    <span className="text-neutral-500 font-medium">
+                      {t('Kemasan:', 'Finish:')}
+                    </span>
+                    <span className="font-bold text-[#592332] text-right truncate max-w-[65%]">{item.finish[lang]}</span>
+                  </div>
+                  <p className="text-[10px] sm:text-[11px] text-neutral-600 line-clamp-2 leading-relaxed mt-1">
+                    {item.notes[lang]}
+                  </p>
                 </div>
-                <p className="text-[11px] text-neutral-600 line-clamp-2 leading-relaxed">
-                  {item.notes[lang]}
-                </p>
-                <div className="pt-2 text-right">
-                  <span className="text-[11px] font-bold text-[#592332] group-hover:underline inline-flex items-center gap-1">
+                <div className="pt-1 text-right">
+                  <span className="text-[10px] sm:text-[11px] font-bold text-[#592332] group-hover:underline inline-flex items-center gap-1">
                     {t('Perincian Look', 'View Look Details')} &rarr;
                   </span>
                 </div>

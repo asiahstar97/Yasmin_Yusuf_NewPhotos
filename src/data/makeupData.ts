@@ -115,37 +115,7 @@ export const PACKAGES: ServicePackage[] = [
     },
   },
 
-  // 4. Malam Berinai
-  {
-    id: 'malam-berinai',
-    name: {
-      bm: 'Malam Berinai',
-      en: 'Henna Night (Malam Berinai)',
-    },
-    category: 'wedding',
-    price: 200,
-    duration: {
-      bm: '1.5 Jam',
-      en: '1.5 Hours',
-    },
-    image: '/images/Photoshoot 2.jpeg',
-    description: {
-      bm: 'Sentuhan solekan hangat tona rose/peach untuk majlis malam berinai bertema.',
-      en: 'Warm rose or peach romantic glow for themed Henna night celebrations.',
-    },
-    inclusions: [
-      { bm: 'Kemasan Warm Toned Soft Glamour', en: 'Warm toned soft glamour glow' },
-      { bm: 'Skin prep menyegarkan wajah malam', en: 'Skin hydration prep for evening photography' },
-      { bm: 'Tona pipi dan bibir tahan lama', en: 'Long-lasting flush on cheeks and lips' },
-      { bm: '100% bulu mata asli tanpa bulu mata palsu', en: '100% natural lashes without fake falsies' },
-    ],
-    recommendedFor: {
-      bm: 'Malam berinai & majlis khatam Al-Quran',
-      en: 'Henna night & intimate family gatherings',
-    },
-  },
-
-  // 5. Engagement
+  // 4. Engagement
   {
     id: 'engagement',
     name: {
@@ -175,12 +145,12 @@ export const PACKAGES: ServicePackage[] = [
     },
   },
 
-  // 6. Bridesmaid
+  // 5. Bridesmaid / Family / Graduation / Event (RM165)
   {
-    id: 'bridesmaid',
+    id: 'bridesmaid-family-event',
     name: {
-      bm: 'Bridesmaid',
-      en: 'Bridesmaid',
+      bm: 'Bridesmaid / Family / Graduasi / Event',
+      en: 'Bridesmaid / Family / Graduation / Event',
     },
     category: 'occasion',
     price: 165,
@@ -191,108 +161,18 @@ export const PACKAGES: ServicePackage[] = [
     popular: true,
     image: '/images/Bridesmaid.jpeg',
     description: {
-      bm: 'Solekan sedondon yang kemas dan manis untuk pengiring pengantin.',
-      en: 'Coordinated, neat, and radiant makeup for the bridal party entourage.',
+      bm: 'Solekan segar & berseri untuk bridesmaid, ahli keluarga, graduan konvokesyen, atau majlis makan malam.',
+      en: 'Radiant look tailored for bridesmaids, bridal family, graduation portraits, or gala dinners.',
     },
     inclusions: [
-      { bm: 'Kemasan Fresh Youthful Natural Glow', en: 'Fresh youthful natural glow' },
-      { bm: 'Disesuaikan dengan warna tema baju', en: 'Customized to match dress palette' },
-      { bm: 'Pantas & tepat mengikut jadual majlis', en: 'Punctual & efficient timing per pax' },
-      { bm: 'Produk mesra wudhu berkualiti tinggi', en: 'Premium wudhu-friendly cosmetics' },
-    ],
-    recommendedFor: {
-      bm: 'Rombongan sahabat & pengiring pengantin',
-      en: 'Bridal entourage & close friends',
-    },
-  },
-
-  // 7. Family Brides (Mother / Sisters)
-  {
-    id: 'family-brides',
-    name: {
-      bm: 'Family Brides (Ibu / Kakak / Adik)',
-      en: 'Family Brides (Mother / Sisters)',
-    },
-    category: 'occasion',
-    price: 165,
-    duration: {
-      bm: '1 Jam / Pax',
-      en: '1 Hour / Pax',
-    },
-    image: "/images/Mother's Bride 1.jpeg",
-    description: {
-      bm: 'Solekan awet muda berseri yang menaikkan seri ibu pengantin, mentua dan adik-beradik.',
-      en: 'Youthful lifting glow tailored for mother of the bride, in-laws, and sisters.',
-    },
-    inclusions: [
-      { bm: 'Kemasan lembut anti-crease & smoothing', en: 'Soft blurring anti-crease smooth finish' },
-      { bm: 'Penjagaan hidrasi untuk kulit matang', en: 'Hydration prep tailored for mature skin' },
-      { bm: 'Warna lembut menyejukkan pandangan', en: 'Elegant subtle palette complementing mother/sister' },
-      { bm: 'Tidak bercapuk sepanjang majlis', en: 'Crack-free endurance for long event hours' },
-    ],
-    recommendedFor: {
-      bm: 'Ibu pengantin, ibu mentua & ahli keluarga',
-      en: 'Mother of bride, groom & siblings',
-    },
-  },
-
-  // 8. Graduation
-  {
-    id: 'graduation',
-    name: {
-      bm: 'Graduation (Konvokesyen)',
-      en: 'Graduation (Convocation)',
-    },
-    category: 'occasion',
-    price: 165,
-    duration: {
-      bm: '1 Jam',
-      en: '1 Hour',
-    },
-    image: '/images/Photoshoot.jpeg',
-    description: {
-      bm: 'Solekan photogenic tahan peluh untuk hari istimewa penganugerahan ijazah anda.',
-      en: 'Sweat-resistant, photogenic finish suited for graduation robe portraits and family photos.',
-    },
-    inclusions: [
-      { bm: 'Tahan peluh di bawah cuaca panas & dewan', en: 'Sweat & humidity resistant formulation' },
-      { bm: 'Sesuai dengan lensa kamera studio & outdoor', en: 'Flash-safe studio & outdoor portrait formula' },
-      { bm: 'Wajah berseri segar dan bermaya', en: 'Fresh luminous complexion' },
+      { bm: 'Kemasan Natural Glow / Soft Glamour', en: 'Natural Glow / Soft Glamour finish' },
+      { bm: 'Skin prep hidrasi mesra wudhu', en: 'Wudhu-friendly hydration skin prep' },
+      { bm: 'Disesuaikan mengikut tema majlis & pakaian', en: 'Customized for event theme & outfit' },
       { bm: 'Pilihan add-on hijab styling RM20', en: 'Optional basic hijab styling add-on RM20' },
     ],
     recommendedFor: {
-      bm: 'Graduan universiti, kolej & penganugerahan',
-      en: 'University graduates & awards recipients',
-    },
-  },
-
-  // 9. Event / Dinner
-  {
-    id: 'event-dinner',
-    name: {
-      bm: 'Event / Dinner',
-      en: 'Event / Annual Dinner',
-    },
-    category: 'occasion',
-    price: 165,
-    duration: {
-      bm: '1 Jam',
-      en: '1 Hour',
-    },
-    image: '/images/Dinner.jpeg',
-    description: {
-      bm: 'Solekan sofistikated untuk majlis makan malam korporat, gala malam atau acara rasmi.',
-      en: 'Sophisticated evening glam tailored for corporate annual dinners and gala banquets.',
-    },
-    inclusions: [
-      { bm: 'Kemasan Soft Glamour Elegan', en: 'Elegant soft glamour evening finish' },
-      { bm: 'Base tahan pendingin hawa dewan', en: 'Base optimized for air-conditioned event halls' },
-      { bm: 'Kontur lembut dan bibir segar menawan', en: 'Subtle definition & long-wearing lips' },
-      { bm: 'Pilihan add-on hijab styling RM20', en: 'Optional basic hijab styling add-on RM20' },
-    ],
-    recommendedFor: {
-      bm: 'Malam anugerah, dinner korporat & gala',
-      en: 'Gala banquets & awards evenings',
+      bm: 'Bridesmaid, keluarga pengantin, graduan & jemputan dinner',
+      en: 'Bridesmaids, family entourage, graduates & dinner guests',
     },
   },
 
@@ -425,7 +305,7 @@ export const PORTFOLIO_GALLERY: PortfolioItem[] = [
       en: 'Solemnization (Nikah) Soft Glam',
     },
     category: 'nikah',
-    image: '/images/Main Photo.jpeg',
+    image: '/images/Sanding_Updated.png',
     lookType: { bm: 'Akad Nikah', en: 'Solemnization' },
     finish: { bm: 'Luminous Dewy Glass Skin', en: 'Luminous Dewy Glass Skin' },
     notes: {
@@ -549,6 +429,44 @@ export const PORTFOLIO_GALLERY: PortfolioItem[] = [
     productsHighlight: {
       bm: 'Breathable day tint, soft peachy cheeks, natural brow grooming.',
       en: 'Breathable day tint, soft peachy cheeks, natural brow grooming.',
+    },
+  },
+  {
+    id: 'p-sambut-menantu',
+    title: {
+      bm: 'Majlis Sambut Menantu',
+      en: 'Majlis Sambut Menantu',
+    },
+    category: 'sambut-menantu',
+    image: '/images/Majlis_Sambut_Menantu.jpeg',
+    lookType: { bm: 'Majlis Sambut Menantu', en: 'Reception (Sambut Menantu)' },
+    finish: { bm: 'Radiant Royal Soft Glam', en: 'Radiant Royal Soft Glam' },
+    notes: {
+      bm: 'Solekan anggun dan berseri meraikan majlis sambut menantu dengan kemasan tahan lama, segar dan selesa.',
+      en: 'Elegant, radiant glow celebrating welcoming the bride reception ceremony with comfortable long-lasting finish.',
+    },
+    productsHighlight: {
+      bm: 'Hydrating base, soft defined lashes, radiant blush, wudhu-friendly skincare.',
+      en: 'Hydrating base, soft defined lashes, radiant blush, wudhu-friendly skincare.',
+    },
+  },
+  {
+    id: 'p-graduasi',
+    title: {
+      bm: 'Graduasi',
+      en: 'Graduation',
+    },
+    category: 'graduation',
+    image: '/images/Graduasi_New.jpeg',
+    lookType: { bm: 'Solekan Graduasi / Konvo', en: 'Graduation / Convocation' },
+    finish: { bm: 'Fresh Youthful Photo-Ready Glow', en: 'Fresh Youthful Photo-Ready Glow' },
+    notes: {
+      bm: 'Kemasan solekan kemas dan berseri tahan seharian di bawah mortar board dan dewan konvokesyen.',
+      en: 'Neat, fresh photo-ready makeup lasting all day under graduation cap and convocation auditorium lights.',
+    },
+    productsHighlight: {
+      bm: 'Sweat-resistant lightweight base, soft peachy lips, natural neat brows.',
+      en: 'Sweat-resistant lightweight base, soft peachy lips, natural neat brows.',
     },
   },
 ];

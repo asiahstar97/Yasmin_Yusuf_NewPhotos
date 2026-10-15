@@ -63,22 +63,22 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Column 2: Visual Focal Carrier with "Main Photo" Alone */}
+          {/* Column 2: Visual Focal Carrier with Widescreen Hero Image */}
           <div className="lg:col-span-6 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+            <div className="relative mx-auto max-w-xl lg:max-w-none">
               {/* Decorative luxury frame background */}
               <div
                 aria-hidden="true"
                 className="absolute -inset-3 bg-gradient-to-tr from-[#F5C3C3]/50 via-pink-200/40 to-rose-100/50 rounded-3xl -rotate-1 blur-sm"
               />
 
-              {/* Main image container: 'Main Photo' alone as requested */}
-              <div className="relative rounded-3xl overflow-hidden border-2 border-[#F5C3C3] shadow-xl bg-white aspect-[3/4] sm:aspect-[4/5] max-h-[560px]">
+              {/* Main image container: Widescreen (16:9) sizing */}
+              <div className="relative rounded-3xl overflow-hidden border-2 border-[#F5C3C3] shadow-xl bg-white aspect-video w-full">
                 <img
-                  src="/images/Main Photo.jpeg"
-                  alt="Main Photo - Make Up Syarie by Yasmin Yusuf"
+                  src="/images/Hero_New.png"
+                  alt="Hero - Make Up Syarie by Yasmin Yusuf"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>
